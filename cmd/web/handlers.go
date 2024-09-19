@@ -21,10 +21,12 @@ func (app *application) home(w http.ResponseWriter, r *http.Request) {
 		app.serverError(w, err)
 		return
 	}
-	// Use the new render helper.
-	app.render(w, http.StatusOK, "home.tmpl", &templateData{
-		Snippets: snippets,
-	})
+
+	data := app.newTemplateData(r)
+	data.Snippets = snippets
+
+	app.render(w, http.StatusOK, "home.tmpl", data)
+
 }
 
 func (app *application) snippetView(w http.ResponseWriter, r *http.Request) {
@@ -42,10 +44,11 @@ func (app *application) snippetView(w http.ResponseWriter, r *http.Request) {
 		}
 		return
 	}
-	// Use the new render helper.
-	app.render(w, http.StatusOK, "view.tmpl", &templateData{
-		Snippet: snippet,
-	})
+
+	data := app.newTemplateData(r)
+	data.Snippet = snippet
+
+	app.render(w, http.StatusOK, "view.tmpl", data)
 }
 
 func (app *application) snippetCreate(w http.ResponseWriter, r *http.Request) {
