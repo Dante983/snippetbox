@@ -5,7 +5,7 @@
     "overrides": [
         {
             "files": [
-                "*.html"
+                "*.tmpl"
             ],
             "options": {
                 "parser": "go-template"
