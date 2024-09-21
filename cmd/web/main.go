@@ -34,9 +34,9 @@ func main() {
 	if err != nil {
 		errorLog.Fatal(err)
 	}
-	// We also defer a call to db.Close(), so that the connection pool is closed // before the main() function exits.
+
 	defer db.Close()
-	// Initialize a new template cache...
+
 	templateCache, err := newTemplateCache()
 	if err != nil {
 		errorLog.Fatal(err)
