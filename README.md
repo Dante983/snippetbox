@@ -92,6 +92,3 @@ Before you begin, ensure you have the following installed on your machine:
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
-
-Make sure to replace `https://github.com/yourusername/snippetbox.git` with the actual URL of your repository and adjust any paths as necessary.
