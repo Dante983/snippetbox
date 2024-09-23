@@ -31,7 +31,7 @@ Before you begin, ensure you have the following installed on your machine:
     - Create a new MySQL user and grant privileges:
 
       ```sql
-      CREATE USER 'snippetbox'@'localhost' IDENTIFIED BY 'password';
+      CREATE USER 'root'@'localhost' IDENTIFIED BY 'secret';
       GRANT ALL PRIVILEGES ON snippetbox.* TO 'snippetbox'@'localhost';
       ```
     - Create sessions table as well
