@@ -48,7 +48,7 @@ Before you begin, ensure you have the following installed on your machine:
     - Import the database schema:
 
       ```sh
-      mysql -u snippetbox -p snippetbox < ./path/to/schema.sql
+      mysql -u root -p secret < ./path/to/schema.sql
       ```
 
 3. **Set up TLS certificates:**
