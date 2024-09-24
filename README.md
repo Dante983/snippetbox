@@ -46,9 +46,7 @@ Before you begin, ensure you have the following installed on your machine:
       );
       
       CREATE INDEX idx_snippets_created ON snippets(created);
-      ```
 
-      ```
     - Create sessions table as well
       
       ```sql
