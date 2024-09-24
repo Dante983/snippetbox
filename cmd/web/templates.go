@@ -19,6 +19,7 @@ type templateData struct {
 	Form            any
 	Flash           string
 	IsAuthenticated bool // Add an IsAuthenticated field to the templateData struct.
+	CSRFToken       string
 }
 
 func humanDate(t time.Time) string {
