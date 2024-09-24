@@ -50,6 +50,8 @@ func (app *application) newTemplateData(r *http.Request) *templateData {
 	return &templateData{
 		CurrentYear: time.Now().Year(),
 		Flash:       app.sessionManager.PopString(r.Context(), "flash"),
+		// Add the authentication status to the template data.
+		IsAuthenticated: app.isAuthenticated(r),
 	}
 }
 
