@@ -31,8 +31,23 @@ Before you begin, ensure you have the following installed on your machine:
     - Create a new MySQL user and grant privileges:
 
       ```sql
-      CREATE USER 'root'@'localhost' IDENTIFIED BY 'secret';
+      CREATE USER 'root'@'localhost' IDENTIFIED BY 'password';
       GRANT ALL PRIVILEGES ON snippetbox.* TO 'snippetbox'@'localhost';
+      ```
+    - Create snippets table
+      
+      ```sql
+      CREATE TABLE snippets (
+      id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+      title VARCHAR(100) NOT NULL,
+      content TEXT NOT NULL,
+      created DATETIME NOT NULL,
+      expires DATETIME NOT NULL
+      );
+      
+      CREATE INDEX idx_snippets_created ON snippets(created);
+      ```
+
       ```
     - Create sessions table as well
       
